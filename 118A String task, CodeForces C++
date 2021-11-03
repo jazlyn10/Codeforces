@@ -1,0 +1,25 @@
+#include <iostream>
+#include<cstring>
+ 
+using namespace std;
+ 
+int main() {
+    char n[100];
+    bool vowels;
+    int i = 0;
+    int len;
+ 
+    cin >> n;
+    len = strlen(n);
+    for (i = 0; i < len; i++) {
+        if (n[i] >= 65 && n[i] <= 92) {
+            n[i] = n[i] + 32;
+        }
+        vowels = (n[i] == 'a' || n[i] == 'e' || n[i] == 'i' || n[i] == 'o' || n[i] == 'u' || n[i] == 'y');
+        if (!vowels){
+            cout << '.' << n[i];
+        }
+    }
+    return 0;
+}
+ 
