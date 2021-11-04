@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int b;
+    int x, y, z, w;
+    cin >> a;
+
+    b = a;
+    while(true) {
+        b++;
+        w = b % 10;
+        x = (b % 100) / 10;
+        y = (b % 1000) / 100;
+        z = (b % 10000) / 1000;
+        if ((w != x) && (w != y) && (w != z) && (x != y) && (x != z) && (y != z)) {
+            cout << b;
+            break;
+        }
+    }
+
+    return 0;
+}
